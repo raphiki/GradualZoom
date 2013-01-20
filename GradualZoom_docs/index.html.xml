@@ -1,0 +1,91 @@
+<?xml-stylesheet type="text/xsl" href="docs.xsl"?><javascript fileName="GradualZoom.js">
+    <object_literal name="GradualZoom" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="false" internal="false">
+        <description>GardualZoom object</description>
+        <unknown name="timeout" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </unknown>
+        <unknown name="maxRatio" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </unknown>
+        <unknown name="speed" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </unknown>
+        <property name="nbZoom" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </property>
+        <unknown name="debug" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </unknown>
+        <property name="myImageId" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </property>
+        <property name="myFrameId" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </property>
+        <property name="myImage" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </property>
+        <property name="myFrame" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </property>
+        <property name="myWidth" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </property>
+        <property name="myHeight" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </property>
+        <unknown name="currentX" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </unknown>
+        <unknown name="currentY" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </unknown>
+        <unknown name="currentImageNb" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+        </unknown>
+        <function name="delayedZoom" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="false" internal="false">
+            <description>Actual zoom function</description>
+            <parameters>
+                <parameter name="n" type="Number">
+                    <description>Zoom ratio</description>
+                </parameter>
+                <parameter name="x" type="Number">
+                    <description>Left coordinate of the mouse click</description>
+                </parameter>
+                <parameter name="y" type="Number">
+                    <description>Top coordinate of the mouse click</description>
+                </parameter>
+                <parameter name="time" type="Number">
+                    <description>Time Out before image zoom</description>
+                </parameter>
+            </parameters>
+        </function>
+        <function name="zoomIn" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="false" internal="false">
+            <description>zoomIn is triggered when normal size imaged is clicked</description>
+            <parameters>
+                <parameter name="e" type="Event">
+                    <description>Mouse event</description>
+                </parameter>
+            </parameters>
+        </function>
+        <function name="zoomOut" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="false" internal="false">
+            <description>zoomOut is triggered when user clicks again</description>
+            <parameters>
+                <parameter name="e" type="Event">
+                    <description>Mouse event</description>
+                </parameter>
+            </parameters>
+            <property name="document" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+                <property name="onmousedown" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+                </property>
+            </property>
+        </function>
+        <function name="init" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="false" internal="false">
+            <description>Initializes the GradualZoom object</description>
+            <parameters>
+                <parameter name="image" type="Array">
+                    <description>ids (&amp;lt;img id=&apos;&apos;&amp;gt; attribute)</description>
+                </parameter>
+                <parameter name="frame" type="Array">
+                    <description>ids (&amp;lt;div id=&apos;&apos; class=&apos;frame&apos;&amp;gt attribute)</description>
+                </parameter>
+            </parameters>
+            <property name="GradualZoom" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+                <property name="myImageId" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+                </property>
+                <property name="myFrameId" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+                </property>
+            </property>
+            <property name="document" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+                <property name="onmousedown" scope="static" constructor="false" deprecated="false" private="false" protected="false" ignored="true" internal="false">
+                </property>
+            </property>
+        </function>
+    </object_literal>
+</javascript>

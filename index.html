@@ -1,0 +1,83 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../../../style.css"/>
+  <style type="text/css">
+  .frame {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .image {
+    position: relative;
+  }
+  </style>
+  <script type="text/javascript" src="GradualZoom.js"></script>
+  <script type="text/javascript">
+    var myImage = ["image1", "image2"];
+    var myFrame = ["frame1", "frame2"];
+  </script>
+</head>
+
+<body onload = "GradualZoom.init(myImage, myFrame); GradualZoom.maxRatio = 10;">
+  <h1>GradualZoom</h1>
+  <p>
+    <div id="frame1" style="overflow: hidden; width: 197px; height: 141px">
+      <img id="image1" src="Fruidefendu.jpg" width="197" height="141" style="position: relative;"/>
+    </div>
+    <h2>What is it?</h2>
+    GradualZoom is a small JavaScript Library allowing to gradually zoom on images when they are clicked on, as shown above.
+  <ul>
+    <li>It is released under the <a href="http://www.gnu.org/licenses/gpl.html">GNU Public License</a>, any contribution, enhancement or adaptation is fairly welcomed.</li>
+    <li>Current version is 0.1, it can be downloaded <a href="GradualZoom.js">here</a>.</li>
+	<li>ScriptDoc Reference is available <a href="GradualZoom_docs/index.html">here</a>.</li>
+    <li>It has been succesfully tested on Mozilla Firefox, Opera, Konqueror, Safari and Internet Explorer. Please report any compatibility problems (raphael AT semeteys DOT org)</li>
+  </ul>
+  <h2>How to use it in your web page?</h2>
+  Check HTML/JavaScript code of this page...
+  <ul>
+    <li>Insert the <i>GradualZoom.js</i> script somewhere in your HTML document (in the &lt;head&gt; tag for instance): <pre>&lt;script type="text/javascript" src="GradualZoom.js"&gt;&lt;/script&gt;</pre>
+    <li>The image to become zoomable must fullfill following constrainsts:
+      <ul>
+        <li>have an unique <i>id</i></li>
+        <li>have <i>width</i> and <i>height</i> attributes values</li>
+        <li>be included in a <i>&lt;div&gt;</i> element with an unique id, <i>width</i>, <i>height</i> and <i>overflow: hidden</i> values precised via a <i>style</i> attribute</li>
+        <li>be relatively positionned</li>
+      </ul>
+<pre>&lt;div id="myFrame" style="overflow: hidden; width: 197px; height: 141px"&gt;
+  &lt;img id="myImage" src="Fruidefendu.jpg" width="197" height="141" style="position: relative;"/&gt;
+&lt;/div&gt;</pre>
+    <li>Call the <i>GradualZoom.init()</i> function:
+      <ul>
+        <li>Either from the <i>onload</i> event of the HTML page or form another &lt;script&gt; insert (in that case it must be placed <b>after</b> the <i>GradualZoom.js</i> include)</li>
+        <li>With the image id and frame id as parameters (passed as arrays)</li>
+      </ul>
+<pre>&lt;body onload = "GradualZoom.init(['myImage'], ['myFrame']);"&gt;</pre>
+    </li>
+  </ul>
+  <h2>How to deal with multiple images?</h2>
+  <ul>
+    <li>Make sur that each image to be zoomable (and each containing frame) has an unique id</li>
+<pre>&lt;div id="<b>frame1</b>" style="overflow: hidden; width: 100px; height: 200px"&gt;
+  &lt;img id="<b>image1</b>" src="myFirstImage.jpg" width="100" height="200" style="position: relative;"/&gt;
+&lt;/div&gt;
+&lt;div id="<b>frame2</b>" style="overflow: hidden; width: 300px; height: 175px"&gt;
+  &lt;img id="<b>image2</b>" src="mySecondImage.jpg" width="300" height="175" style="position: relative;"/&gt;
+&lt;/div&gt;
+</pre>
+    <li>Pass the lists of image ids and frame ids to the GradualZoom.init() function:
+<pre>&lt;body onload = "GradualZoom.init(['<b>image1</b>', '<b>image2</b>'], ['<b>frame1</b>', '<b>frame2</b>']);"&gt;</pre>
+  </ul>
+    <div id="frame2" class="frame" style="width: 470px; height: 410px">
+      <img id="image2" class="image" src="Chimere.jpg" width="470" height="410" />
+    </div>
+    <h2>Customization</h2>
+    If necessary, following parameters can be modified in the <i>GradualZoom</i> object:
+    <ul>
+      <li><i>GradualZoom.maxRatio</i>: Maximum zoom level (default value: 2)</li>
+      <li><i>GradualZoom.speed</i>: Number of unitary zooms between zoom levels (default value: 7)</li>
+      <li><i>GradualZoom.timeout</i>: Time Out, in ms, between each unitary zoom (default value: 50)</li>
+    </ul>
+  </p>
+</body>
+</html>
