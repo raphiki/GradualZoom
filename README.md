@@ -5,8 +5,9 @@
 GradualZoom is a small JavaScript Library allowing to gradually zoom on images when they are clicked on, as shown above.
 
 * It is released under the <a href="http://www.gnu.org/licenses/gpl.html">GNU Public License</a>, any contribution, enhancement or adaptation is fairly welcomed.
-* Current version is 0.1, it can be downloaded <a href="GradualZoom.js">here</a>.</li>
-* ScriptDoc Reference is available <a href="GradualZoom_docs/index.html">here</a>.</li>
+* Try the <a href="http://semeteys.org/tek/JavaScript/GradualZoom/">demo</a> 
+* Current version is 0.1, it can be downloaded <a href="http://semeteys.org/tek/JavaScript/GradualZoom/GradualZoom.js">here</a>.</li>
+* ScriptDoc Reference is available <a href="http://semeteys.org/tek/JavaScript/GradualZoom/GradualZoom_docs/index.html">here</a>.</li>
 * It has been succesfully tested on Mozilla Firefox, Opera, Konqueror, Safari and Internet Explorer. Please report any compatibility problems (raphael AT semeteys DOT org)</li>
 
 ## How to use it in your web page?
